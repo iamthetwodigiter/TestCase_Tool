@@ -18,7 +18,7 @@ def print_success(text):
     print(f"{Fore.GREEN}✅ {text}{Style.RESET_ALL}")
 
 def print_info(text):
-    print(f"{Fore.YELLOW}ℹ️ {text}{Style.RESET_ALL}")
+    print(f"{Fore.YELLOW}ℹ️  {text}{Style.RESET_ALL}")
 
 def check_language_support(ext):
     """Check if the required language support is available"""

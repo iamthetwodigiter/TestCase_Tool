@@ -5,6 +5,7 @@ from pathlib import Path
 from colorama import init, Fore, Style
 from genetate_testcases import generate_testcases
 from validate_testcases import validate_testcases
+import pyfiglet
 
 init()
 
@@ -12,6 +13,7 @@ def print_header(text):
     print(f"\n{Fore.CYAN}{'='*50}{Style.RESET_ALL}")
     print(f"{Fore.CYAN}💠 {text}{Style.RESET_ALL}")
     print(f"{Fore.CYAN}{'='*50}{Style.RESET_ALL}")
+
 
 def print_error(text):
     print(f"{Fore.RED}❌ {text}{Style.RESET_ALL}")
@@ -21,7 +23,7 @@ def print_info(text):
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Test Case Generator and Validator Tool",
+        description="Test Case Generator and Validator Tool by thetwodigiter",
         formatter_class=argparse.RawTextHelpFormatter,
     )
 
@@ -50,7 +52,10 @@ def main():
     working_dir = os.getcwd()
 
     try:
-        print_header("Test Case Management Tool")
+        app = pyfiglet.figlet_format('TestCase Tool',font='doom')
+        print(Fore.MAGENTA + app)
+        dev = pyfiglet.figlet_format('by  thetwodigiter',font='doom')
+        print(Fore.BLUE + dev)
         print_info(f"Working directory: {working_dir}")
 
         if args.action in ["generate", "both"]:
