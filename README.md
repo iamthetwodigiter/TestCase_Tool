@@ -27,7 +27,7 @@ The tool requires different compilers/runtimes based on the solution language yo
 
 Additional Python dependencies:
 ```bash
-pip install colorama
+pip install colorama pyfiglet
 ```
 
 ## Project Structure
